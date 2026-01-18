@@ -1,0 +1,43 @@
+:root {
+  font-family: "Pretendard", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #212427;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100 900;
+  src: url("./fonts/PretendardVariable.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+/* Pretendard Weights
+ 100 - Thin
+ 200 - ExtraLight
+ 300 - Light
+ 400 - Regular
+ 500 - Medium
+ 600 - SemiBold
+ 700 - Bold
+ 800 - ExtraBold
+ 900 - Black */
+
+body {
+  font-family: "Pretendard";
+  letter-spacing: -1px;
+  line-height: 1.4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

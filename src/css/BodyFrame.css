@@ -1,0 +1,192 @@
+/* DESKTOP */
+:root {
+  --bodyframe-margin-rl: 36px;
+  --elementstack-gap: 28px;
+  --titleText-font-size: 28px;
+  --titleText-description-font-size: 21px;
+  --button-width: 96px;
+  --button-height: 40px;
+  --button-text-font-size: 15px;
+  --reloadUI-padding-bottom: 40px;
+  --reloadUI-gap: 28px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  :root {
+    --bodyframe-margin-rl: 36px;
+    --elementstack-gap: 24px;
+    --titleText-font-size: 25px;
+    --titleText-description-font-size: 19px;
+    --button-width: 96px;
+    --button-height: 40px;
+    --button-text-font-size: 15px;
+    --reloadUI-padding-bottom: 30px;
+    --reloadUI-gap: 28px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  :root {
+    --bodyframe-margin-rl: 24px;
+    --elementstack-gap: 16px;
+    --titleText-font-size: 19px;
+    --titleText-description-font-size: 14px;
+    --button-width: 86px;
+    --button-height: 35px;
+    --button-text-font-size: 14px;
+    --reloadUI-padding-bottom: 20px;
+    --reloadUI-gap: 20px;
+  }
+}
+
+.bodyFrame {
+  width: 100%;
+  height: min-content;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px var(--bodyframe-margin-rl) 0px var(--bodyframe-margin-rl);
+  overflow: visible;
+  align-content: center;
+  gap: 0px;
+}
+
+.imgBox {
+  width: 100%;
+  max-width: 920px;
+  position: relative;
+  background-color: #383c3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: clip;
+  aspect-ratio: 16 / 9;
+  border-radius: 30px;
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.imgBox-elementStack {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: var(--elementstack-gap);
+  z-index: 1;
+}
+
+.imgBox-textStack {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px 10px 0px 10px;
+  gap: 6px;
+}
+
+.imgBox-buttonStack {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px 10px 0px 10px;
+  gap: 14px;
+}
+
+.imgBox-titleText {
+  width: 100%;
+  height: auto;
+  font-size: var(--titleText-font-size);
+  font-weight: 600;
+  color: #eaeaea;
+  text-align: center;
+  pointer-events: none;
+}
+
+.imgBox-titleText-description {
+  width: 100%;
+  height: auto;
+  font-size: var(--titleText-description-font-size);
+  font-weight: 400;
+  color: #c9c9c9;
+  text-align: center;
+}
+
+.imgBox-button {
+  box-sizing: border-box;
+  width: var(--button-width);
+  height: var(--button-height);
+  display: block;
+  border-radius: 20px;
+  border: 1.5px solid #eaeaea;
+  background-color: transparent;
+  backdrop-filter: blur(1px);
+  color: #eaeaea;
+}
+
+.imgBox-button:hover {
+  background-color: #eaeaea;
+  border: 1.5px solid #eaeaea;
+  color: #111111;
+  cursor: pointer;
+}
+
+.imgBox-button-text {
+  width: auto;
+  height: auto;
+  font-size: var(--button-text-font-size);
+  font-weight: 500;
+  text-align: center;
+}
+
+.dim {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(1, 1, 1, 0.75);
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+}
+
+.dim-reloadUI {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+.reloadUI-buttonStack {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px 10px 0px 10px;
+  gap: var(--reloadUI-gap);
+  padding: 0px 0px var(--reloadUI-padding-bottom) 0px;
+}
